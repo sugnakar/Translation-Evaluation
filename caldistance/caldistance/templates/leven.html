@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<center>
+<head>
+<h2> Translation Correctness. </h2>
+</head>
+<body>
+    <style>
+        body {
+            padding: 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 20px;
+            }
+            .titlet{
+                font-size: 20px;
+            }
+            .ttitle{
+                font-size: 20px;
+            }
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--  <script src="https://code.responsivevoice.org/responsivevoice.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="{% static "js/leven.js" %}"></script>
+<h5>Using levenshtein distance</h5>
+<h5>Translate the source language to english in the below text area: <br></h5>
+<br>
+<fieldset>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                Source Language:
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                Original Translation:
+            </td>
+         </tr>
+        <tr>
+            <td colspan="2">
+                <textarea class="title" id="txtSource" rows="10" cols="30">अंग्रेजी भाषा सीखने में आपका स्वागत है</textarea>
+            </td>
+            <td>
+            </td>
+            <td colspan="2">
+                <textarea class="ttitle" id="originalTxt" rows="10" cols="30">Click the submit button to see the original translation.
+                </textarea>
+            </td>
+         </tr>
+         <tr>
+         	
+         </tr>
+         <tr>
+         	<td>
+                Type English Translation Below:
+            </td>
+         </tr>
+         <tr>      
+            <td colspan="2">
+                <textarea class="titlet" id="txtTarget" rows="10" cols="30"></textarea>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+    <br>
+ <button id="btnSubmit" onclick="myfunction()">Submit</button>
+ 
+<br>
+  </body>
+  </center>
+</html>
